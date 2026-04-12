@@ -9,7 +9,7 @@ import { serverURL } from '../App';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { setUserdata } from '../redux/userSlice';
-function Auth() {
+function Auth({isModel=false}) {
   const dispatch = useDispatch();
   const handleGoogleAuth = async () => {
     try {
