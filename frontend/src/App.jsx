@@ -4,6 +4,9 @@ import { useEffect } from 'react'
 import Home from "./pages/Home";
 import Auth from "./pages/Auth";
 import InterviewPage from "./pages/InterviewPage";
+import InterviewHistory from './pages/InterviewHistory'
+import Pricing from './pages/Pricing'
+import InterviewReport from './pages/InterviewReport'
 import { useDispatch } from 'react-redux';
 import { setUserdata } from './redux/userSlice';
 import axios from 'axios';
@@ -30,7 +33,10 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/auth" element={<Auth />} />
-      <Route path="/interview" element={<InterviewPage />} />
+       <Route path='/interview' element={<InterviewPage/>}/>
+      <Route path='/history' element={<InterviewHistory/>}/>
+      <Route path='/pricing' element={<Pricing/>}/>
+      <Route path='/report/:id' element={<InterviewReport/>}/>
     </Routes>
   )
 }
